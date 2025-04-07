@@ -38,22 +38,22 @@ const Admin = () => {
   const [success, setSuccess] = useState('');
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-
-  const fetchData = async () => {
-    try {
-      if (activeTab === 0) {
-        const response = await axios.get('/api/articles');
-        setArticles(response.data);
-      } else {
-        const response = await axios.get('/api/services');
-        setServices(response.data);
+    const fetchData = async () => {
+      try {
+        if (activeTab === 0) {
+          const response = await axios.get('/api/articles');
+          setArticles(response.data);
+        } else {
+          const response = await axios.get('/api/services');
+          setServices(response.data);
+        }
+      } catch (err) {
+        setError('Failed to fetch data');
       }
-    } catch (err) {
-      setError('Failed to fetch data');
-    }
-  };
+    };
+
+    fetchData();
+  }, [activeTab]);
 
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);

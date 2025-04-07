@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Outlet, Link, RouterLink } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { 
   AppBar, 
   Toolbar, 
@@ -23,8 +23,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { motion } from 'framer-motion';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
