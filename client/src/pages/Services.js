@@ -187,7 +187,7 @@ const ServiceCard = ({ service }) => {
 
 const Services = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Box sx={{ py: 8, bgcolor: 'background.default' }}>

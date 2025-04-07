@@ -5,7 +5,7 @@ import {
   Box,
   Grid,
   Card,
-  CardContent,
+  CardMedia,
   useTheme,
   Avatar,
   Chip,

@@ -62,12 +62,17 @@ const Contact = () => {
     setStatus({ loading: true, success: false, error: false, message: '' });
 
     try {
-      const response = await axios.post('http://localhost:5001/api/contact', formData);
+      await axios.post(
+        process.env.NODE_ENV === 'production' 
+          ? 'https://dux-outsourcing.vercel.app/api/contact'
+          : 'http://localhost:5001/api/contact',
+        formData
+      );
       setStatus({
         loading: false,
         success: true,
         error: false,
-        message: 'Thank you for your message! We will get back to you soon.'
+        message: 'Message sent successfully!'
       });
       setFormData({
         name: '',
@@ -83,7 +88,7 @@ const Contact = () => {
         loading: false,
         success: false,
         error: true,
-        message: error.response?.data?.message || 'An error occurred. Please try again.'
+        message: 'Failed to send message. Please try again.'
       });
     }
   };

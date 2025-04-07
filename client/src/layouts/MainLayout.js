@@ -17,6 +17,7 @@ import {
   Grid,
   ListItemIcon,
   TextField,
+  CssBaseline,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -39,6 +40,7 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import HomeIcon from '@mui/icons-material/Home';
 
 const MainLayout = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

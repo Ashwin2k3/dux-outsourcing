@@ -39,7 +39,7 @@ const Admin = () => {
 
   useEffect(() => {
     fetchData();
-  }, [activeTab]);
+  }, [fetchData]);
 
   const fetchData = async () => {
     try {
